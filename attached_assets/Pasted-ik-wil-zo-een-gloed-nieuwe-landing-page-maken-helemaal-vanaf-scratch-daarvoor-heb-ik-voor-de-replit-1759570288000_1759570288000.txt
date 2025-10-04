@@ -1,0 +1,116 @@
+ik wil zo een gloed nieuwe landing page maken helemaal vanaf scratch. daarvoor heb ik voor de replit v3 agent deze implementatie brief. ik vroeg me af of jij een demo van dit front-end kan maken in een canvas zodat ik een beetje weet wat ik kan verwachten, want zn replit run kost best geld.
+
+Implementatiebrief: Nieuwe MuscleCoach Landingspagina (v1.1 from Scratch - Aangescherpte Narratief)
+Aan: De Replit Coding Agent
+Onderwerp: Bouw een nieuwe, moderne en high-converting landingspagina voor de MuscleCoach fitness app, gebaseerd op de bijgevoegde productstrategie.
+Projectdoel (Executive Summary)
+Je taak is om een volledige, responsive landingspagina te bouwen vanaf een leeg canvas. De pagina moet de branding van de MuscleCoach app perfect weerspiegelen en de unieke, AI-gedreven waardepropositie overtuigend communiceren. De kernboodschap is: MuscleCoach optimaliseert trainingsvolume op basis van performance- en hersteldata om spiergroei te personaliseren en progressive overload te automatiseren. Het eindresultaat moet een professionele, snelle en visueel aantrekkelijke pagina zijn die bezoekers aanzet tot het downloaden van de app.
+Deel A: Projectopzet & Technische Specificaties
+1. Technologie Stack
+HTML5: Gebruik semantische HTML tags (<header>, <main>, <section>, <footer>, etc.).
+CSS3: Gebruik moderne CSS, inclusief Flexbox en Grid voor de layout. Schrijf de CSS in een apart bestand (css/style.css).
+JavaScript (Vanilla ES6+): Gebruik JavaScript voor eventuele interactiviteit (zoals een testimonial-carrousel). Geen complexe frameworks nodig.
+2. Project Structuur (File Structure)
+Creëer de volgende mappen en bestanden:
+code
+Code
+/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── assets/
+    └── images/
+        ├── logo-placeholder.png
+        ├── appstore-badge-placeholder.png
+        ├── playstore-badge-placeholder.png
+        ├── screenshot-generator-placeholder.png
+        ├── screenshot-tracking-placeholder.png
+        ├── screenshot-recovery-placeholder.png
+        ├── screenshot-advice-placeholder.png
+        └── hero-visual-placeholder.png
+3. Design System & Branding (Visuele Richtlijnen)
+Implementeer dit in style.css (gebruik CSS variabelen voor consistentie).
+Kleurenpalet:
+--primary-bg: #121212 (Donkergrijs/Zwart)
+--secondary-bg: #1E1E1E (Iets lichter grijs voor kaarten)
+--accent-red: #D92121 (Primair rood voor knoppen en highlights, gebaseerd op het logo)
+--text-primary: #FFFFFF (Wit)
+--text-secondary: #A9A9A9 (Lichtgrijs voor subteksten)
+Typografie:
+Font: Importeer 'Inter' van Google Fonts (weights: 400, 600, 700).
+H1 (Grote Titel): 64px, 700 weight
+H2 (Sectie Koppen): 48px, 700 weight
+Body Tekst: 18px, 400 weight
+Knoppen (Buttons):
+Primary Button (.btn-primary): Gevuld met --accent-red, witte tekst, groeit iets bij hover.
+Secondary Button (.btn-secondary): Transparante achtergrond, 1px witte rand, witte tekst, vult met donkerrood bij hover.
+Deel B: Sectie-voor-Sectie Bouwplan
+Bouw de index.html op met de volgende secties, in deze volgorde.
+1. Header & Navigatie (<header>)
+Layout: Logo links, navigatielinks rechts, CTA-knop uiterst rechts.
+Content:
+Logo: assets/images/logo-placeholder.png
+Links: Features | Waarom MuscleCoach?
+Knop: Download App (gebruik .btn-primary stijl).
+2. Hero Sectie (<section id="hero">)
+Layout: Twee kolommen (tekst links, visual rechts).
+Content (Links):
+H1 Titel: "Stop met gokken. Begin met groeien."
+Subtekst: "MuscleCoach is de slimme fitness-app die je trainingsschema continu personaliseert op basis van jouw prestaties en hersteldata. Geen templates, pure AI-coaching voor maximale spiergroei."
+Knoppen: [Download de App] (.btn-primary), [Bekijk de Features] (.btn-secondary).
+Content (Rechts):
+Een gestileerde smartphone-omtrek met daarin de assets/images/hero-visual-placeholder.png.
+3. Probleem & Oorzaak Sectie (<section id="problem-cause">)
+Layout: Gecentreerde titel en subtekst, gevolgd door een 3-koloms grid.
+Content:
+H2 Titel: "Waarom je progressie stagneert"
+Subtekst (De Oorzaak): "Spiergroei is geen magie, het is wetenschap. Progressie stopt wanneer de fundamentele principes – Progressive Overload, Effort, Volume, Load en Herstel – niet consistent en gepersonaliseerd worden toegepast."
+Tussenkop (onder de subtekst): "Dit leidt tot de drie meest voorkomende 'valkuilen':"
+Kaart 1 (De Valkuilen - Trainingsschema's): Titel: "Statische Schema's", beschrijving: "Gekochte of zelfgemaakte schema's zijn niet adaptief. Ze houden geen rekening met jouw herstel, slaap of stress, waardoor progressie stopt."
+Kaart 2 (Program-hopping): Titel: "Program-hopping", beschrijving: "Constant wisselen van schema's reset je adaptatie. Zonder consistente, progressieve overload blijft echte spiergroei uit."
+Kaart 3 (Andere Apps): Titel: "Simpele Tracking Apps", beschrijving: "De meeste apps loggen alleen data, maar nemen geen beslissingen. Data zonder actie leidt niet tot een beter plan."
+4. Oplossing & Features Sectie (<section id="features">)
+Layout: Titel en daaronder een feature-grid (2x2).
+Content:
+H2 Titel: "Waarom MuscleCoach wél de kern raakt"
+Subtekst: "Wij maken personalisatie werkend in de praktijk door de vijf basisprincipes van spiergroei te automatiseren."
+Feature Kaart 1 (AI Program Generator): Titel: "AI Program Generator", beschrijving: "Onze AI voert een 'Needs Analysis' uit om een perfect startprogramma te bouwen, gebaseerd op jouw doelen, stijl en materiaal.", visual: assets/images/screenshot-generator-placeholder.png.
+Feature Kaart 2 (Recovery Tracking): Titel: "Adaptief Herstel", beschrijving: "De app meet je herstel en past je trainingsvolume wekelijks aan. Ruim op tijd hersteld? Een extra set. Vermoeid? Tijd voor een deload.", visual: assets/images/screenshot-recovery-placeholder.png.
+Feature Kaart 3 (Rep & Weight Advices): Titel: "Automatische Progressive Overload", beschrijving: "Nooit meer gokken in de gym. Na elke set geeft de AI een concreet advies voor het gewicht en de herhalingen van je volgende set om vooruitgang te garanderen.", visual: assets/images/screenshot-advice-placeholder.png.
+Feature Kaart 4 (Pro-active AI Coach): Titel: "Proactieve AI Coach", beschrijving: "De app is meer dan een tool; het is je coach. Krijg proactief inzicht, feedback en aanpassingen om plateaus te doorbreken.", visual: assets/images/screenshot-tracking-placeholder.png.
+5. Testimonials Sectie (<section id="testimonials">)
+Layout: Titel en daaronder een carrousel (slider).
+Content:
+H2 Titel: "Wat onze gebruikers zeggen"
+Implementeer 3 testimonial-kaarten met placeholder-tekst en -afbeeldingen, met werkende navigatiepijlen.
+6. Finale CTA (<section id="cta">)
+Layout: Gecentreerde tekst en twee grote knoppen.
+Content:
+H2 Titel: "Klaar om je training serieus te nemen?"
+Subtekst: "Download MuscleCoach vandaag en ervaar het verschil dat échte personalisatie maakt."
+Knoppen:
+Een knop met de assets/images/appstore-badge-placeholder.png die linkt naar https://apps.apple.com/nl/app/muscle-coach/id6478009374.
+Een knop met de assets/images/playstore-badge-placeholder.png die linkt naar https://play.google.com/store/apps/details?id=com.muscle_coach.android.
+7. Footer (<footer>)
+Layout: 4 kolommen.
+Content:
+Kolom 1: Logo, tagline: "De intelligente fitness coach die je helpt je doelen te bereiken.", social media iconen (placeholders).
+Kolom 2 (Product): Features, Waarom MuscleCoach?
+Kolom 3 (Support): FAQ, Contact, Privacy Policy, Terms of Service.
+Kolom 4 (Contact): E-mail, telefoon (placeholders).
+Onderaan: Copyright-tekst: "© 2024 MuscleCoach. Alle rechten voorbehouden."
+Definitie van "Klaar" (Acceptatiecriteria)
+
+De volledige paginastructuur zoals hierboven beschreven is gebouwd in index.html.
+
+Alle styling is geïmplementeerd in style.css volgens het Design System.
+
+De landingspagina is volledig responsive en functioneel op mobiel, tablet en desktop.
+
+Alle placeholder-assets zijn correct geladen.
+
+Alle externe links (App Store, Play Store) zijn correct geïmplementeerd.
+
+De code is schoon, goed georganiseerd en volgt de opgegeven bestandsstructuur.
