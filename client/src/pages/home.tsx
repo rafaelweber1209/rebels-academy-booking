@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Dumbbell, TrendingUp, Activity, Brain, Zap, Target } from "lucide-react";
 import { useState, useEffect } from "react";
+import { ChatBot } from "@/components/ChatBot";
 
 import logoImage from "@assets/logo-red.png";
 import watermarkImage from "@assets/logo-watermark.png";
@@ -523,6 +524,8 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      
+      <ChatBot />
     </div>
   );
 }
