@@ -137,11 +137,9 @@ export default function Home() {
             variant="default" 
             className="bg-primary text-primary-foreground shadow-lg shadow-primary/20"
             data-testid="button-download-header"
-            asChild
+            onClick={() => scrollToSection('cta')}
           >
-            <a href="https://apps.apple.com/nl/app/muscle-coach/id6478009374">
-              Download App
-            </a>
+            Download App
           </Button>
         </div>
       </header>
@@ -176,11 +174,9 @@ export default function Home() {
                     size="lg" 
                     className="bg-primary text-primary-foreground text-lg h-14 px-8 shadow-lg shadow-primary/20"
                     data-testid="button-download-hero"
-                    asChild
+                    onClick={() => scrollToSection('cta')}
                   >
-                    <a href="https://apps.apple.com/nl/app/muscle-coach/id6478009374">
-                      Download de App
-                    </a>
+                    Download de App
                   </Button>
                   <Button 
                     size="lg" 
