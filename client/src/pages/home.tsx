@@ -290,11 +290,11 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
               <Card className="overflow-hidden hover-elevate" data-testid="card-feature-generator">
-                <div className="aspect-[9/16] relative bg-card overflow-hidden">
+                <div className="relative bg-card overflow-hidden h-64 sm:h-72 md:h-80 flex items-center justify-center">
                   <img 
                     src={generatorImage} 
                     alt="AI Program Generator" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
@@ -311,11 +311,11 @@ export default function Home() {
               </Card>
 
               <Card className="overflow-hidden hover-elevate" data-testid="card-feature-recovery">
-                <div className="aspect-[9/16] relative bg-card overflow-hidden">
+                <div className="relative bg-card overflow-hidden h-64 sm:h-72 md:h-80 flex items-center justify-center">
                   <img 
                     src={recoveryImage} 
                     alt="Recovery Tracking" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
@@ -332,11 +332,11 @@ export default function Home() {
               </Card>
 
               <Card className="overflow-hidden hover-elevate" data-testid="card-feature-overload">
-                <div className="aspect-[9/16] relative bg-card overflow-hidden">
+                <div className="relative bg-card overflow-hidden h-64 sm:h-72 md:h-80 flex items-center justify-center">
                   <img 
                     src={adviceImage} 
                     alt="Progressive Overload" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
@@ -353,11 +353,11 @@ export default function Home() {
               </Card>
 
               <Card className="overflow-hidden hover-elevate" data-testid="card-feature-coach">
-                <div className="aspect-[9/16] relative bg-card overflow-hidden">
+                <div className="relative bg-card overflow-hidden h-64 sm:h-72 md:h-80 flex items-center justify-center">
                   <img 
                     src={coachImage} 
                     alt="AI Coach" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
