@@ -542,10 +542,7 @@ export default function Home() {
                 <h4 className="font-bold mb-4 text-lg">Contact</h4>
                 <ul className="space-y-3">
                   <li className="text-muted-foreground" data-testid="text-footer-email">
-                    info@musclecoach.app
-                  </li>
-                  <li className="text-muted-foreground" data-testid="text-footer-phone">
-                    +31 (0)20 123 4567
+                    rafael@xxlnutrition.nl
                   </li>
                 </ul>
               </div>
