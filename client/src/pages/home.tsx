@@ -4,11 +4,11 @@ import { ChevronLeft, ChevronRight, Dumbbell, TrendingUp, Activity, Brain, Zap, 
 import { useState, useEffect } from "react";
 
 import logoImage from "@assets/generated_images/MuscleCoach_fitness_app_logo_aa26afdf.png";
-import heroImage from "@assets/generated_images/Hero_smartphone_app_mockup_625fbb5b.png";
-import generatorImage from "@assets/generated_images/AI_program_generator_screenshot_8cd997b5.png";
-import recoveryImage from "@assets/generated_images/Recovery_tracking_dashboard_screenshot_8e4c7b49.png";
-import adviceImage from "@assets/generated_images/Progressive_overload_advice_screenshot_f43a7a77.png";
-import coachImage from "@assets/generated_images/AI_coach_dashboard_screenshot_d995d39d.png";
+import heroImage from "@assets/hero-dashboard.png";
+import generatorImage from "@assets/program-generator.png";
+import recoveryImage from "@assets/adaptive-recovery.png";
+import adviceImage from "@assets/progressive-overload.png";
+import coachImage from "@assets/proactive-coaching.png";
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
