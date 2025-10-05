@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Dumbbell, TrendingUp, Activity, Brain, Zap, Target, Facebook, Twitter, Instagram } from "lucide-react";
+import { ChevronLeft, ChevronRight, Dumbbell, TrendingUp, Activity, Brain, Zap, Target } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import logoImage from "@assets/logo-red.png";
@@ -476,7 +476,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="bg-card/50 border-t border-border py-16">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <img src={logoImage} alt="MuscleCoach Logo" className="h-10 w-10" />
@@ -485,23 +485,6 @@ export default function Home() {
                 <p className="text-muted-foreground leading-relaxed">
                   De intelligente fitness coach die je helpt je doelen te bereiken.
                 </p>
-                <div className="flex gap-4 pt-2">
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors hover-elevate" data-testid="link-social-facebook">
-                    <div className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center">
-                      <Facebook className="w-5 h-5" />
-                    </div>
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors hover-elevate" data-testid="link-social-twitter">
-                    <div className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center">
-                      <Twitter className="w-5 h-5" />
-                    </div>
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors hover-elevate" data-testid="link-social-instagram">
-                    <div className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center">
-                      <Instagram className="w-5 h-5" />
-                    </div>
-                  </a>
-                </div>
               </div>
 
               <div>
@@ -516,24 +499,6 @@ export default function Home() {
                     <button onClick={() => scrollToSection('problem-cause')} className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-waarom">
                       Waarom MuscleCoach?
                     </button>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4 text-lg">Support</h4>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-faq">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-contact">Contact</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-privacy">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-terms">Terms of Service</a>
                   </li>
                 </ul>
               </div>
