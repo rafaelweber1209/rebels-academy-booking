@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Dumbbell, TrendingUp, Activity, Brain, Zap, Target, Facebook, Twitter, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import logoImage from "@assets/generated_images/MuscleCoach_fitness_app_logo_aa26afdf.png";
+import logoImage from "@assets/logo-red.png";
+import watermarkImage from "@assets/logo-watermark.png";
 import heroImage from "@assets/dashboard-hero-new.png";
 import generatorImage from "@assets/program-generator-new.png";
 import recoveryImage from "@assets/soreness-tracking-new.png";
@@ -28,19 +29,13 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "MuscleCoach heeft mijn training volledig getransformeerd. Geen gokwerk meer, alleen gebaseerde beslissingen en echte vooruitgang.",
-      author: "Mark van der Berg",
-      role: "Fitness Enthusiast"
+      quote: "MuscleCoach heeft mijn training volledig getransformeerd. Geen gokwerk meer, alleen gebaseerde beslissingen en echte vooruitgang."
     },
     {
-      quote: "De AI-coach begrijpt precies wanneer ik een deload nodig heb en wanneer ik kan pushen. Dit is de toekomst van training.",
-      author: "Sarah Jansen",
-      role: "Powerlifter"
+      quote: "De AI-coach begrijpt precies wanneer ik een deload nodig heb en wanneer ik kan pushen. Dit is de toekomst van training."
     },
     {
-      quote: "Eindelijk een app die verder gaat dan alleen loggen. De gepersonaliseerde adviezen maken echt het verschil in mijn spiergroei.",
-      author: "Tim Bakker",
-      role: "Bodybuilder"
+      quote: "Eindelijk een app die verder gaat dan alleen loggen. De gepersonaliseerde adviezen maken echt het verschil in mijn spiergroei."
     }
   ];
 
@@ -148,6 +143,15 @@ export default function Home() {
         {/* Hero Section */}
         <section id="hero" className="relative py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-card/20 via-background to-background pointer-events-none" />
+          
+          {/* Watermark */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+            <img 
+              src={watermarkImage} 
+              alt="" 
+              className="w-full max-w-4xl h-auto"
+            />
+          </div>
           
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -258,6 +262,15 @@ export default function Home() {
 
         {/* Features Section */}
         <section id="features" className="py-20 md:py-32 relative">
+          {/* Watermark */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+            <img 
+              src={watermarkImage} 
+              alt="" 
+              className="w-full max-w-4xl h-auto"
+            />
+          </div>
+          
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-40 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
             <div className="absolute bottom-40 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -375,10 +388,6 @@ export default function Home() {
                 <p className="text-2xl md:text-3xl font-medium leading-relaxed">
                   "{testimonials[currentTestimonial].quote}"
                 </p>
-                <div className="space-y-1 pt-4">
-                  <p className="font-bold text-lg">{testimonials[currentTestimonial].author}</p>
-                  <p className="text-muted-foreground">{testimonials[currentTestimonial].role}</p>
-                </div>
               </Card>
 
               <div className="flex justify-center gap-4 mt-8">
@@ -406,6 +415,15 @@ export default function Home() {
         {/* Final CTA Section */}
         <section id="cta" className="py-20 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background pointer-events-none" />
+          
+          {/* Watermark */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+            <img 
+              src={watermarkImage} 
+              alt="" 
+              className="w-full max-w-4xl h-auto"
+            />
+          </div>
           
           <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold" data-testid="text-cta-title">
