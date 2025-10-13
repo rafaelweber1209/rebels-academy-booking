@@ -6,7 +6,7 @@ import { ChatBot } from "@/components/ChatBot";
 
 import logoImage from "@assets/logo-red.png";
 import watermarkImage from "@assets/logo-watermark.png";
-import heroImage from "@assets/dashboard-hero-new.png";
+import heroImage from "@assets/dashboard hero PNG_1760336604698.png";
 import generatorImage from "@assets/program-generator-new.png";
 import recoveryImage from "@assets/soreness-tracking-new.png";
 import adviceImage from "@assets/overload-new.png";
