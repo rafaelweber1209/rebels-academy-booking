@@ -1,0 +1,270 @@
+================================================================================
+                    MUSCLECOACH PROJECT - ARCHITECTURE OVERVIEW
+================================================================================
+
+PROJECT: MuscleCoach Landing Page (Fitness AI Coaching App)
+ENVIRONMENT: Replit
+LANGUAGE: TypeScript (100% type-safe)
+STATUS: Active Development
+
+================================================================================
+                              QUICK FACTS
+================================================================================
+
+📊 Project Size:
+   - Frontend: React 18 + TypeScript (client/src/)
+   - Backend: Express.js + TypeScript (server/)
+   - Shared Code: Database schemas (shared/)
+   - Total Lines of Code: ~1,500 lines (excluding node_modules)
+
+🎯 Main Purpose:
+   - High-converting landing page for fitness app
+   - Showcase AI-powered features to potential users
+   - Drive downloads to iOS App Store and Google Play Store
+   - Include AI customer support chatbot
+
+🌍 Languages: Primarily Dutch (nl-NL)
+
+================================================================================
+                           TECHNOLOGY SUMMARY
+================================================================================
+
+FRONTEND:
+  ✓ React 18.3.1 + TypeScript 5.6.3
+  ✓ Vite 5.4.20 (lightning-fast build & HMR)
+  ✓ Tailwind CSS 3.4.17 (dark-mode first)
+  ✓ Radix UI + shadcn/ui (40+ accessible components)
+  ✓ Wouter 3.3.5 (minimal routing)
+  ✓ React Query 5.60.5 (server state management)
+  ✓ Zod 3.24.2 (schema validation)
+
+BACKEND:
+  ✓ Express.js 4.21.2
+  ✓ TypeScript (strict mode)
+  ✓ OpenAI API (gpt-5-nano model)
+  ✓ Server-Sent Events (SSE) for streaming
+
+DATABASE (Configured, not yet integrated):
+  ✓ Drizzle ORM 0.39.1
+  ✓ PostgreSQL via @neondatabase/serverless
+  ✓ Currently using in-memory storage
+
+BUILD TOOLS:
+  ✓ Vite (frontend)
+  ✓ esbuild (backend)
+  ✓ tsx (dev server)
+
+================================================================================
+                            FOLDER STRUCTURE
+================================================================================
+
+/client/src/
+  ├── App.tsx                    - Root app + routing
+  ├── pages/
+  │   ├── home.tsx               - Landing page (MAIN FILE)
+  │   └── not-found.tsx          - 404 page
+  ├── components/
+  │   ├── ChatBot.tsx            - AI support chatbot (floating widget)
+  │   └── ui/                    - 40+ shadcn components
+  ├── lib/
+  │   ├── queryClient.ts         - React Query setup
+  │   └── utils.ts               - Utility functions
+  └── hooks/
+      ├── use-mobile.tsx         - Mobile detection
+      └── use-toast.ts           - Toast notifications
+
+/server/
+  ├── index.ts                   - Server entry point
+  ├── routes.ts                  - API endpoints (/api/chat)
+  ├── storage.ts                 - Storage interface (MemStorage)
+  └── vite.ts                    - Vite HMR integration
+
+/shared/
+  └── schema.ts                  - Database schema (Drizzle + Zod)
+
+================================================================================
+                          KEY COMPONENTS EXPLAINED
+================================================================================
+
+1. LANDING PAGE (client/src/pages/home.tsx)
+   Purpose: Showcase product features and convert visitors
+   Sections: 
+     - Sticky header with navigation
+     - Hero section (headline + phone mockup)
+     - Problem explanation (3 fitness pitfalls)
+     - 2x2 feature grid (AI features)
+     - Testimonials carousel
+     - Final CTA section
+     - Footer with links
+   Key: All elements have test IDs for automation
+
+2. CHATBOT (client/src/components/ChatBot.tsx)
+   Purpose: AI-powered customer support widget
+   Features:
+     - Floating button (bottom-right)
+     - Expandable chat interface
+     - Real-time streaming responses
+     - Message history (localStorage persisted)
+     - Rate-limited (20 req/hour)
+
+3. API ENDPOINT (/api/chat)
+   Purpose: Stream OpenAI responses
+   Input: { message: string, previousResponseId?: string }
+   Output: Server-Sent Events (text/event-stream)
+   Authentication: Rate-limited by client IP
+   AI Prompt: Customer support for MuscleCoach (fitness knowledge)
+
+================================================================================
+                          DESIGN SYSTEM AT A GLANCE
+================================================================================
+
+COLORS (Dark Mode):
+  Background Primary:   #121212 (near-black)
+  Background Secondary: #1E1E1E (elevated surfaces)
+  Accent Red:          #D92121 (CTAs and highlights)
+  Text Primary:        #FFFFFF (headers)
+  Text Secondary:      #A8A8A8 (descriptions)
+
+TYPOGRAPHY:
+  Font Family: Inter (Google Fonts)
+  Hero Title:  64px / font-bold
+  Section H2:  48px / font-bold
+  Body Text:   18px / font-normal
+  Responsive:  Scales down on mobile
+
+RESPONSIVE DESIGN:
+  Mobile:   < 768px  (single column, full width)
+  Tablet:   768-1024px (adjusted grid)
+  Desktop:  > 1024px (full layouts)
+
+ANIMATIONS:
+  - Fade in up (hero elements)
+  - Floating effect (phone mockup)
+  - Smooth scroll navigation
+  - Hover scale on buttons
+
+================================================================================
+                        DEVELOPMENT WORKFLOW
+================================================================================
+
+GETTING STARTED:
+  1. npm install
+  2. Set OPENAI_API_KEY environment variable
+  3. npm run dev (start development server)
+  4. Open browser to Replit dev URL
+  5. Changes auto-reload (HMR)
+
+COMMON COMMANDS:
+  npm run dev        - Start development server
+  npm run build      - Build for production
+  npm start          - Run production build
+  npm run check      - Type check without building
+  npm run db:push    - Apply database migrations (if using DB)
+
+KEY FILES TO EDIT:
+  Landing page copy:    client/src/pages/home.tsx (line 171+)
+  Hero image:          client/src/pages/home.tsx (line 9)
+  Feature cards:       client/src/pages/home.tsx (line 293+)
+  Chat prompt:         server/routes.ts (line 74)
+  Theme colors:        tailwind.config.ts
+
+================================================================================
+                          KNOWN LIMITATIONS
+================================================================================
+
+CURRENTLY NOT IMPLEMENTED:
+  ✗ Database integration (schema defined but using in-memory)
+  ✗ User authentication (configured but not active)
+  ✗ Automated tests (test IDs present but no test suite)
+  ✗ Analytics integration
+  ✗ Email capture/newsletters
+  ✗ Multi-language support (i18n)
+
+READY TO IMPLEMENT:
+  ✓ PostgreSQL via Drizzle (infrastructure ready)
+  ✓ User auth via Passport.js (dependencies installed)
+  ✓ Test framework (Jest, Vitest)
+
+================================================================================
+                          TESTING & QA
+================================================================================
+
+TEST IDs: All major elements have data-testid attributes for E2E testing
+RESPONSIVE: Test at 375px (mobile), 768px (tablet), 1440px (desktop)
+PERFORMANCE: Vite provides fast HMR in development
+VALIDATION: npm run check catches all TypeScript errors
+
+================================================================================
+                          DEPLOYMENT
+================================================================================
+
+Environment: Replit
+Build Process: npm run build
+Execution: npm start
+Port: Specified by Replit (PORT env variable)
+Static Files: /dist/public/
+API Server: /dist/index.js
+
+Pre-deploy Checklist:
+  ✓ npm run check (no TS errors)
+  ✓ Test in dev environment
+  ✓ Verify OPENAI_API_KEY is set
+  ✓ Build successfully: npm run build
+  ✓ Test production build locally
+
+================================================================================
+                        CONTACT & RESOURCES
+================================================================================
+
+Project Owner: rafael@xxlnutrition.nl
+
+Documentation Files:
+  - PROJECT_ORIENTATION_REPORT.md  (Comprehensive technical guide)
+  - DEVELOPER_ONBOARDING.md        (Quick start for developers)
+  - design_guidelines.md           (Design system details)
+  - replit.md                      (Replit-specific setup)
+  - ARCHITECTURE_OVERVIEW.txt      (This file)
+
+External Resources:
+  - React Docs: https://react.dev
+  - Tailwind CSS: https://tailwindcss.com
+  - shadcn/ui: https://ui.shadcn.com
+  - Express: https://expressjs.com
+
+================================================================================
+                          QUICK START CHECKLIST
+================================================================================
+
+For new developers joining the project:
+
+Day 1 (Understanding):
+  [ ] Read this architecture overview
+  [ ] Read PROJECT_ORIENTATION_REPORT.md (section 1-5)
+  [ ] Read DEVELOPER_ONBOARDING.md
+  [ ] Run `npm run dev` successfully
+  
+Day 2 (Exploration):
+  [ ] Explore client/src/pages/home.tsx
+  [ ] Explore client/src/components/ChatBot.tsx
+  [ ] Read design_guidelines.md
+  [ ] Make a small UI change (text color, spacing)
+
+Day 3 (Implementation):
+  [ ] Understand ChatBot streaming implementation
+  [ ] Test chatbot locally with OPENAI_API_KEY
+  [ ] Read server/routes.ts and understand API flow
+
+Day 4 (Contribution):
+  [ ] Identify first task/bug to fix
+  [ ] Implement change
+  [ ] Test locally and verify no TS errors
+
+Day 5+ (Productivity):
+  [ ] Deploy changes to Replit
+  [ ] Contribute features confidently
+
+================================================================================
+Report Generated: October 18, 2025
+Project Status: Active Development
+Last Updated: October 18, 2025
+================================================================================
